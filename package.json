@@ -4,7 +4,8 @@
   "description": "Lightweight package to easily update page titles in a React app",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "pretty": "prettier --write 'src/**/*.js'",
     "build": "babel src --out-dir lib"
   },
   "repository": {
@@ -38,9 +39,11 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
-    "eslint": "^6.5.1",
+    "babel-jest": "^24.9.0",
     "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-test-renderer": "^16.10.2"
   }
 }
