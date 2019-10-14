@@ -1,7 +1,7 @@
 # React Page Title
 ![Travis CI Build Status](https://travis-ci.org/RyanFitzgerald/react-pagetitle.svg?branch=master)
 
-React Page Title is a simple utility that allows you to easily update the document title in both a class and functional component in any React app.
+React Page Title is a lightweight and simple utility that allows you to easily update the document title in both a class and functional component in any React app. It comes with both a hook implementation and a higher-order component implementation (that makes use of the hook).
 
 ## Installation and Usage
 
