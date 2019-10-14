@@ -72,6 +72,18 @@ class MyComponent extends React.Component {
 export default withPageTitle()(MyComponent);
 ```
 
+## Changelog
+
+### Current Version: 1.0.0
+
+#### Features
+- Initial commit / release
+
+#### Bug Fixes
+- None
+
+See CHANGELOG.md for more.
+
 ## License
 
 MIT License. See LICENSE.md for details.
