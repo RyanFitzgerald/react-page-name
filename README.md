@@ -44,15 +44,34 @@ class MyComponent extends React.Component {
   }
 }
 
-export default withPageTitle('My Page Title!')
-
-const MyComponent = props => {
-  usePageTitle('My Page Title!');
-  
-  return (
-    <div>Cool Component!</div>
-  );
-};
-
-export default MyComponent;
+export default withPageTitle('My Page Title!')(MyComponent);
 ```
+
+#### Props
+
+`props.setPageTitle`
+
+The Higher-Order Component implementation injects a `setPageTitle` function into your component that can be used to change the page title at various points of the React lifecycle. This is especially helpful in class components where you sometimes will want to change the page title only after the component has mounted and more data is available. An example of the usage is:
+
+```jsx
+import React from "react";
+import {withPageTitle} from "react-pagetitle";
+
+class MyComponent extends React.Component {
+  componentDidMount() {
+    this.props.setPageTitle('Another title!');
+  }
+
+  render() {
+    return (
+      <div>Cool Component!</div>
+    );
+  }
+}
+
+export default withPageTitle()(MyComponent);
+```
+
+## License
+
+MIT License. See LICENSE.md for details.
