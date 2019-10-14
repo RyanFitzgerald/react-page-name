@@ -1,12 +1,12 @@
 {
   "name": "react-pagetitle",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Lightweight package to easily update page titles in a React app",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "pretty": "prettier --write 'src/**/*.js'",
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib --ignore src/__tests__"
   },
   "repository": {
     "type": "git",
