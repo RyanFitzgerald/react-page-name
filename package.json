@@ -1,0 +1,46 @@
+{
+  "name": "react-pagetitle",
+  "version": "0.0.1",
+  "description": "Lightweight package to easily update page titles in a React app",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanFitzgerald/react-pagetitle.git"
+  },
+  "keywords": [
+    "react",
+    "page",
+    "title",
+    "document",
+    "page",
+    "title",
+    "document",
+    "title",
+    "hooks",
+    "hoc"
+  ],
+  "author": "Ryan Fitzgerald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyanFitzgerald/react-pagetitle/issues"
+  },
+  "homepage": "https://github.com/RyanFitzgerald/react-pagetitle#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
