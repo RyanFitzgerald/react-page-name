@@ -1,7 +1,7 @@
 {
-  "name": "react-pagetitle",
+  "name": "react-page-name",
   "version": "1.0.0",
-  "description": "Lightweight package to easily update page titles in a React app",
+  "description": "Lightweight and simple package to easily update page names in a React app",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
@@ -10,26 +10,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RyanFitzgerald/react-pagetitle.git"
+    "url": "git+https://github.com/RyanFitzgerald/react-page-name.git"
   },
   "keywords": [
     "react",
     "page",
     "title",
+    "name",
     "document",
     "page",
-    "title",
     "document",
-    "title",
     "hooks",
-    "hoc"
+    "hoc",
+    "page name"
   ],
   "author": "Ryan Fitzgerald",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RyanFitzgerald/react-pagetitle/issues"
+    "url": "https://github.com/RyanFitzgerald/react-page-name/issues"
   },
-  "homepage": "https://github.com/RyanFitzgerald/react-pagetitle#readme",
+  "homepage": "https://github.com/RyanFitzgerald/react-page-name#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

@@ -2,7 +2,7 @@ import { act } from 'react-dom/test-utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import withPageTitle from '../with-page-title';
+import withPageName from '../with-page-name';
 
 const TestComponent = () => {
   return <div>Test Functional Component!</div>;
@@ -16,7 +16,7 @@ class TestClass extends React.Component {
 
 class TestClassWithProps extends React.Component {
   componentDidMount() {
-    this.props.setPageTitle('Page Mounted Title!');
+    this.props.setPageName('Page Mounted Name!');
   }
 
   render() {
@@ -30,7 +30,7 @@ describe('withPageTitle', () => {
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
-    document.title = 'Original Title';
+    document.title = 'Original Name';
   });
 
   afterEach(() => {
@@ -38,49 +38,47 @@ describe('withPageTitle', () => {
     container = null;
   });
 
-  it('renders functional component with new page title', () => {
-    const EnhancedComponent = withPageTitle('My Page Title')(TestComponent);
+  it('renders functional component with new page name', () => {
+    const EnhancedComponent = withPageName('My Page Name')(TestComponent);
 
     // Test render and effect
     act(() => {
       ReactDOM.render(<EnhancedComponent />, container);
     });
 
-    expect(document.title).toBe('My Page Title');
+    expect(document.title).toBe('My Page Name');
   });
 
-  it('renders class component with new page title', () => {
-    const EnhancedComponent = withPageTitle('My Page Title')(TestClass);
+  it('renders class component with new page name', () => {
+    const EnhancedComponent = withPageName('My Page Name')(TestClass);
 
     // Test render and effect
     act(() => {
       ReactDOM.render(<EnhancedComponent />, container);
     });
 
-    expect(document.title).toBe('My Page Title');
+    expect(document.title).toBe('My Page Name');
   });
 
-  it('renders original title when no title is provided', () => {
-    const EnhancedComponent = withPageTitle()(TestComponent);
+  it('renders original title when no name is provided', () => {
+    const EnhancedComponent = withPageName()(TestComponent);
 
     // Test render and effect
     act(() => {
       ReactDOM.render(<EnhancedComponent />, container);
     });
 
-    expect(document.title).toBe('Original Title');
+    expect(document.title).toBe('Original Name');
   });
 
-  it('renders class component with new page title set from props', () => {
-    const EnhancedComponent = withPageTitle('My Page Title')(
-      TestClassWithProps
-    );
+  it('renders class component with new page name set from props', () => {
+    const EnhancedComponent = withPageName('My Page Name')(TestClassWithProps);
 
     // Test render and effect
     act(() => {
       ReactDOM.render(<EnhancedComponent />, container);
     });
 
-    expect(document.title).toBe('Page Mounted Title!');
+    expect(document.title).toBe('Page Mounted Name!');
   });
 });

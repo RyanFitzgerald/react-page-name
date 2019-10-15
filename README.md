@@ -1,11 +1,12 @@
-# React Page Title
-![Travis CI Build Status](https://travis-ci.org/RyanFitzgerald/react-pagetitle.svg?branch=master)
+# React Page Name
 
-React Page Title is a lightweight and simple utility that allows you to easily update the document title in both a class and functional component in any React app. It comes with both a hook implementation and a higher-order component implementation (that makes use of the hook).
+![Travis CI Build Status](https://travis-ci.org/RyanFitzgerald/react-page-name.svg?branch=master)
+
+React Page Name is a lightweight and simple utility that allows you to easily update the document title (page name) in both a class and functional component in any React app. It comes with both a hook implementation and a higher-order component implementation (that makes use of the hook).
 
 ## Installation and Usage
 
-`npm install react-pagetitle` to first install the dependency.
+`npm install react-page-name` to first install the dependency.
 
 After installation, there are 2 options for usage:
 
@@ -14,15 +15,13 @@ After installation, there are 2 options for usage:
 The first option is use via a React hook inside your functional component.
 
 ```jsx
-import React from "react";
-import {usePageTitle} from "react-pagetitle";
+import React from 'react';
+import { usePageName } from 'react-page-name';
 
 const MyComponent = props => {
-  usePageTitle('My Page Title!');
-  
-  return (
-    <div>Cool Component!</div>
-  );
+  usePageName('My Page Page!');
+
+  return <div>Cool Component!</div>;
 };
 
 export default MyComponent;
@@ -33,43 +32,39 @@ export default MyComponent;
 The second option is use via a Higher Order Component. The hook approach is recommended over the HOC, however when a hook can't be used (such as in a Class component), the HOC option is available.
 
 ```jsx
-import React from "react";
-import {withPageTitle} from "react-pagetitle";
+import React from 'react';
+import { withPageName } from 'react-page-name';
 
 class MyComponent extends React.Component {
   render() {
-    return (
-      <div>Cool Component!</div>
-    );
+    return <div>Cool Component!</div>;
   }
 }
 
-export default withPageTitle('My Page Title!')(MyComponent);
+export default withPageName('My Page Name!')(MyComponent);
 ```
 
 #### Props
 
-`props.setPageTitle`
+`props.setPageName`
 
-The Higher-Order Component implementation injects a `setPageTitle` function into your component that can be used to change the page title at various points of the React lifecycle. This is especially helpful in class components where you sometimes will want to change the page title only after the component has mounted and more data is available. An example of the usage is:
+The Higher-Order Component implementation injects a `setPageName` function into your component that can be used to change the page name at various points of the React lifecycle. This is especially helpful in class components where you sometimes will want to change the page name only after the component has mounted and more data is available. An example of the usage is:
 
 ```jsx
-import React from "react";
-import {withPageTitle} from "react-pagetitle";
+import React from 'react';
+import { withPageName } from 'react-page-name';
 
 class MyComponent extends React.Component {
   componentDidMount() {
-    this.props.setPageTitle('Another title!');
+    this.props.setPageName('Another name!');
   }
 
   render() {
-    return (
-      <div>Cool Component!</div>
-    );
+    return <div>Cool Component!</div>;
   }
 }
 
-export default withPageTitle()(MyComponent);
+export default withPageName()(MyComponent);
 ```
 
 ## Changelog
@@ -77,9 +72,11 @@ export default withPageTitle()(MyComponent);
 ### Current Version: 1.0.0
 
 #### Features
+
 - Initial commit / release
 
 #### Bug Fixes
+
 - None
 
 See CHANGELOG.md for more.

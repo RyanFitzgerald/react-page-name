@@ -2,25 +2,25 @@ import { act } from 'react-dom/test-utils';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { usePageTitle } from '../use-page-title';
+import { usePageName } from '../use-page-name';
 
 const TestComponentWithCall = () => {
-  usePageTitle('New Title!');
+  usePageName('New Name!');
   return <div>Test Functional Component!</div>;
 };
 
 const TestComponentWithEmptyCall = () => {
-  usePageTitle();
+  usePageName();
   return <div>Test Functional Component!</div>;
 };
 
-describe('usePageTitle', () => {
+describe('usePageName', () => {
   let container;
 
   beforeEach(() => {
     container = document.createElement('div');
     document.body.appendChild(container);
-    document.title = 'Original Title';
+    document.title = 'Original Name';
   });
 
   afterEach(() => {
@@ -28,12 +28,21 @@ describe('usePageTitle', () => {
     container = null;
   });
 
-  it('renders with original title using hook and no param', () => {
+  it('renders with original name using hook and no param', () => {
     // Test render and effect
     act(() => {
       ReactDOM.render(<TestComponentWithEmptyCall />, container);
     });
 
-    expect(document.title).toBe('Original Title');
+    expect(document.title).toBe('Original Name');
+  });
+
+  it('renders with original name using hook', () => {
+    // Test render and effect
+    act(() => {
+      ReactDOM.render(<TestComponentWithCall />, container);
+    });
+
+    expect(document.title).toBe('New Name!');
   });
 });

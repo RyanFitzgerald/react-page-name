@@ -1,2 +1,2 @@
-export { usePageTitle } from './use-page-title';
-export { default as withPageTitle } from './with-page-title';
+export { usePageName } from './use-page-name';
+export { default as withPageName } from './with-page-name';
