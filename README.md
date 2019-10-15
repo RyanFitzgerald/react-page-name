@@ -1,6 +1,9 @@
 # React Page Name
 
 ![Travis CI Build Status](https://travis-ci.org/RyanFitzgerald/react-page-name.svg?branch=master)
+![Dependencies](https://img.shields.io/david/ryanfitzgerald/react-page-name)
+![MIT License](https://img.shields.io/npm/l/react-page-name)
+![size](https://img.shields.io/bundlephobia/minzip/react-page-name)
 
 React Page Name is a lightweight and simple utility that allows you to easily update the document title (page name) in both a class and functional component in any React app. It comes with both a hook implementation and a higher-order component implementation (that makes use of the hook).
 
