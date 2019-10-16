@@ -72,15 +72,15 @@ export default withPageName()(MyComponent);
 
 ## Changelog
 
-### Current Version: 1.0.0
+### Current Version: 1.0.1
 
 #### Features
 
-- Initial commit / release
+- Add dependency array to `useEffect` for performance increase
 
 #### Bug Fixes
 
-- None
+- Fix exports of built files
 
 See CHANGELOG.md for more.
 

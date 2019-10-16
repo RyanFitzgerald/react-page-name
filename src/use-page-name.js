@@ -6,5 +6,5 @@ export const usePageName = (name = false) => {
     if (name) {
       document.title = name;
     }
-  });
+  }, [name]);
 };
