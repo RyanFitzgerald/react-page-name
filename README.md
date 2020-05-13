@@ -22,7 +22,7 @@ import React from 'react';
 import { usePageName } from 'react-page-name';
 
 const MyComponent = props => {
-  usePageName('My Page Page!');
+  usePageName('My Page Name!');
 
   return <div>Cool Component!</div>;
 };
